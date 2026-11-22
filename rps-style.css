@@ -1,0 +1,81 @@
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;          /* her şeyi yatayda ortala */
+  justify-content: center;      /* her şeyi dikeyde ortala */
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  margin: 10px 0;
+  font-size: 2.5rem;
+}
+
+h2 {
+  margin: 0 0 20px;
+  font-weight: normal;
+  opacity: 0.8;
+}
+
+/* Üç resmi yan yana diz */
+#choices {
+  display: flex;
+  flex-wrap: wrap;              /* ekran darsa resimler alt satıra geçsin */
+  justify-content: center;
+  gap: 30px;
+  margin: 20px 0;
+  padding: 0 10px;
+}
+
+/* Seçim resimleri */
+.choice {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;            /* resim bozulmadan kutuya sığar */
+  background-color: white;
+  cursor: pointer;              /* üzerine gelince el işareti çıkar */
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 4px solid transparent;
+  border-radius: 12px;
+}
+
+.choice:hover {
+  transform: scale(1.1);        /* üzerine gelince büyür */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Seçilen resmin çerçevesi */
+.selected {
+  border-color: gold;
+  box-shadow: 0 0 20px gold;
+}
+
+/* Sonuç yazısı */
+#result {
+  min-height: 1.5em;            /* boşken de yer kaplasın, sayfa zıplamasın */
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Sıfırla butonu */
+#reset {
+  padding: 10px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #1e3c72;
+  background-color: gold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#reset:hover {
+  background-color: #ffd84d;
+}
